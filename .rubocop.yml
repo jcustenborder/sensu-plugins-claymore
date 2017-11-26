@@ -1,30 +1,42 @@
-
 MethodLength:
-  Max: 200
+    Max: 200
 
 LineLength:
-  Max: 160
+    Max: 225
 
 AbcSize:
-  Max: 100
+  Max: 125
 
 FileName:
-  Enabled: false
+    Enabled: false
 
 PerceivedComplexity:
-  Enabled: false
+    Enabled: false
 
 CyclomaticComplexity:
-  Enabled: false
+    Enabled: false
 
 ClassLength:
-  Enabled: false
+    Enabled: false
 
 IfUnlessModifier:
-  Enabled: false
+    Enabled: false
 
 RegexpLiteral:
   Enabled: false
 
 Style/Documentation:
   Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassVars:
+  Exclude:
+    - test/**/*.rb
