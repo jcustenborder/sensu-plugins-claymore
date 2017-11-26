@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sensu-plugin/metric/cli'
 require 'socket'
 require 'json'
@@ -8,16 +10,16 @@ module SensuPluginsClaymore
     class ClaymoreMetricsJSON < Sensu::Plugin::Metric::CLI::JSON
       option :host,
              description: 'Claymore dual host',
-             short: '-h HOST',
-             long: '--host HOST',
-             default: 'localhost'
+             short:       '-h HOST',
+             long:        '--host HOST',
+             default:     'localhost'
 
       option :port,
              description: 'Claymore dual management port',
-             short: '-p PORT',
-             long: '--port PORT',
-             proc: proc(&:to_i),
-             default: 4000
+             short:       '-p PORT',
+             long:        '--port PORT',
+             proc:        proc(&:to_i),
+             default:     4000
 
       def run
         dual = SensuPluginsClaymore::Dual::ClaymoreDualClient.new config

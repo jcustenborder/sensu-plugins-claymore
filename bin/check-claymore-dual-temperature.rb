@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sensu-plugin/check/cli'
 
 module SensuPluginsClaymore
@@ -51,12 +53,11 @@ module SensuPluginsClaymore
         gpu_ok   = {}
 
         response['gpu'].each do |index, values|
-          if index == config[:gpu] || -1 == config[:gpu]
-            temperature     = values['temperature']
-            gpu_crit[index] = temperature if temperature >= config[:critical]
-            gpu_warn[index] = temperature if temperature >= config[:warning]
-            gpu_ok[index]   = temperature
-          end
+          next unless index == config[:gpu] || config[:gpu] == -1
+          temperature     = values['temperature']
+          gpu_crit[index] = temperature if temperature >= config[:critical]
+          gpu_warn[index] = temperature if temperature >= config[:warning]
+          gpu_ok[index]   = temperature
         end
 
         unless gpu_crit.empty?
@@ -73,7 +74,6 @@ module SensuPluginsClaymore
 
         ok "GPU temperature ok: #{gpu_ok.map { |k, v| "#{k} = #{v}c" }.join(', ')}"
       end
-
     end
   end
 end

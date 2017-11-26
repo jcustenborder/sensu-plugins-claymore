@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SensuPluginsClaymore
   module Version
     MAJOR = 0
