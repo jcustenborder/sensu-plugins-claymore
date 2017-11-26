@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# rubocop:disable ConditionalAssignment, Style/SafeNavigation
+
 require 'socket'
 require 'json'
 
@@ -27,7 +29,7 @@ module SensuPluginsClaymore
           sleep(5) unless count <= MAX_ATTEMPTS
           retry unless count > MAX_ATTEMPTS
         ensure
-          socket&.close
+          socket.close if socket
         end
 
         response_json['result']
