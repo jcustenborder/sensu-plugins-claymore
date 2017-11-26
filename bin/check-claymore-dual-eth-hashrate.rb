@@ -1,4 +1,30 @@
-# frozen_string_literal: true
+#!/usr/bin/env ruby
+#
+# check-claymore-dual-eth-hashrate.rb
+#
+# DESCRIPTION:
+#   This plugin checks the ETH hashrate of the miner instance.
+#
+# OUTPUT:
+#   plain-text
+#
+# PLATFORMS:
+#   Linux
+#
+# DEPENDENCIES:
+#   gem: sensu-plugin
+#
+# USAGE:
+#   Check the total hashrate for the miner instance.
+#   check-claymore-dual-eth-hashrate.rb --critical 100 --warning 120
+#
+#   Check the hashrate of an individual gpu
+#   check-claymore-dual-eth-hashrate.rb --critical 100 --warning 120 --gpu 0
+#
+# LICENSE:
+#   Copyright 2017 Jeremy Custenborder <jcustenborder@gmail.com>
+#   Released under the Apache 2.0 license; see LICENSE
+#   for details.
 
 require 'sensu-plugin/check/cli'
 

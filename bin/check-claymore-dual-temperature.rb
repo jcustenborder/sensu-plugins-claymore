@@ -1,4 +1,28 @@
-# frozen_string_literal: true
+#!/usr/bin/env ruby
+#
+# check-claymore-dual-temperature.rb
+#
+# DESCRIPTION:
+#   This plugin is used to check the temperature of the GPUs on the miner host.
+#
+# OUTPUT:
+#   plain-text
+#
+# PLATFORMS:
+#   Linux
+#
+# DEPENDENCIES:
+#   gem: sensu-plugin
+#
+# USAGE:
+#   Checks that the GPUs on the host are below thresholds
+#   check-claymore-dual-temperature.rb
+#
+#
+# LICENSE:
+#   Copyright 2017 Jeremy Custenborder <jcustenborder@gmail.com>
+#   Released under the Apache 2.0 license; see LICENSE
+#   for details.
 
 require 'sensu-plugin/check/cli'
 

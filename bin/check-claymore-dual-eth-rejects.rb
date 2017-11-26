@@ -1,4 +1,28 @@
-# frozen_string_literal: true
+#!/usr/bin/env ruby
+#
+# check-claymore-dual-eth-rejects.rb
+#
+# DESCRIPTION:
+#   This plugin checks the number of percentage of rejected shares.
+#
+# OUTPUT:
+#   plain-text
+#
+# PLATFORMS:
+#   Linux
+#
+# DEPENDENCIES:
+#   gem: sensu-plugin
+#
+# USAGE:
+#   Checks that the number of rejects do not exceed a threshold.
+#   check-claymore-dual-eth-rejects.rb
+#
+#
+# LICENSE:
+#   Copyright 2017 Jeremy Custenborder <jcustenborder@gmail.com>
+#   Released under the Apache 2.0 license; see LICENSE
+#   for details.
 
 require 'sensu-plugin/check/cli'
 
