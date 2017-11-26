@@ -9,13 +9,13 @@ require 'sensu-plugins-claymore'
 Gem::Specification.new do |s| # rubocop:disable Metrics/BlockLength
   s.authors                = ['Sensu-Plugins and contributors']
   s.date                   = Date.today.to_s
-  s.description            = 'Sensu skel plugins'
+  s.description            = 'Sensu plugin for monitoring Claymore cryptocurrency miners'
   s.email                  = '<sensu-users@googlegroups.com>'
   s.executables            = Dir.glob('bin/**/*.rb').map { |file| File.basename(file) }
   s.files                  = Dir.glob('{bin,lib}/**/*') + %w[LICENSE README.md CHANGELOG.md]
-  s.homepage               = 'https://github.com/sensu-plugins/sensu-plugins-skel'
-  s.license                = 'MIT'
-  s.metadata               = { 'maintainer'         => 'sensu-plugin',
+  s.homepage               = 'https://github.com/jcustenborder/sensu-plugins-claymore'
+  s.license                = 'Apache 2.0'
+  s.metadata               = { 'maintainer'         => 'jcustenborder',
                                'development_status' => 'active',
                                'production_status'  => 'unstable - testing recommended',
                                'release_draft'      => 'false',
@@ -25,7 +25,7 @@ Gem::Specification.new do |s| # rubocop:disable Metrics/BlockLength
   s.post_install_message   = 'You can use the embedded Ruby by setting EMBEDDED_RUBY=true in /etc/default/sensu'
   s.require_paths          = ['lib']
   s.required_ruby_version  = '>= 2.0.0'
-  s.summary                = 'Sensu plugins for skel'
+  s.summary                = 'Sensu plugin for monitoring Claymore cryptocurrency miners'
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsClaymore::Version::VER_STRING
 
